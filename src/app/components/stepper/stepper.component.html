@@ -1,0 +1,29 @@
+<div class="stepper stepper--{{ direction }}">
+  <div
+    *ngFor="let step of steps; let i = index"
+    class="stepper__step"
+    [class.stepper__step--active]="currentStep === i"
+    [class.stepper__step--done]="i < currentStep"
+    (click)="currentStep = i"
+  >
+    {{ step.label }}
+    <div *ngIf="i >= currentStep" class="stepper__step-number">{{ i + 1 }}</div>
+    <div *ngIf="i < currentStep" class="stepper__step-number">
+      <svg
+        width="17"
+        height="17"
+        viewBox="0 0 17 17"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <path
+          d="M13.9534 4.58334L6.62011 11.9167L3.28677 8.58334"
+          stroke="#8D8D8D"
+          stroke-width="1.2"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        />
+      </svg>
+    </div>
+  </div>
+</div>

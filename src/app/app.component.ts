@@ -1,3 +1,4 @@
+import { Step, StepperDirection } from './components/stepper/stepper.model';
 import { Component } from '@angular/core';
 
 @Component({
@@ -6,5 +7,17 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'test_stepper_ng_15';
+  readonly stepperDirection = StepperDirection;
+  stepper1: Step[] = [
+    {label: 'Role'},
+    {label: 'Email'},
+    {label: 'Settings'},
+  ];
+  
+  stepper2: Step[] = [
+    {label: 'Role'},
+    {label: 'Email'},
+    {label: 'Settings'},
+    {label: 'Settings'},
+  ];
 }
