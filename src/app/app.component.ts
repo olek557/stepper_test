@@ -20,4 +20,7 @@ export class AppComponent {
     {label: 'Settings'},
     {label: 'Settings'},
   ];
+
+  stepper1CurrentStep = 0;
+  stepper2CurrentStep = 0;
 }

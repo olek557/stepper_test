@@ -1,18 +1,28 @@
 <div class="container">
   <h1 class="h1">Stepper 1</h1>
   <div class="container--1">
-    <app-stepper [steps]="stepper1"></app-stepper>
+    <app-stepper
+      [steps]="stepper1"
+      [currentStep]="stepper1CurrentStep"
+      (stepClicked)="stepper1CurrentStep = $event"
+    ></app-stepper>
   </div>
 
-  <h1 class="h1">Stepper 2</h1>
+  <h1 class="h1">Stepper 2 Horizontal</h1>
   <div class="container--2">
-    <app-stepper [steps]="stepper2"></app-stepper>
+    <app-stepper
+      [steps]="stepper2"
+      [currentStep]="stepper2CurrentStep"
+      (stepClicked)="stepper2CurrentStep = $event"
+    ></app-stepper>
   </div>
-  <h1 class="h1">Stepper 3</h1>
+  <h1 class="h1">Stepper 2 Vertical</h1>
   <div class="container--3">
     <app-stepper
       [steps]="stepper2"
+      [currentStep]="stepper2CurrentStep"
       [direction]="stepperDirection.Vertical"
+      (stepClicked)="stepper2CurrentStep = $event"
     ></app-stepper>
   </div>
 </div>

@@ -4,7 +4,7 @@
     class="stepper__step"
     [class.stepper__step--active]="currentStep === i"
     [class.stepper__step--done]="i < currentStep"
-    (click)="currentStep = i"
+    (click)="stepClicked.emit(i)"
   >
     {{ step.label }}
     <div *ngIf="i >= currentStep" class="stepper__step-number">{{ i + 1 }}</div>
